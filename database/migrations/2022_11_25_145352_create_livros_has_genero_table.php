@@ -15,6 +15,8 @@ class CreateLivrosHasGeneroTable extends Migration
     {
         Schema::create('livros_has_genero', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('livro_id')->constrained('livro');
+            $table->foreignId('genero_id')->constrained('genero');
             $table->timestamps();
         });
     }

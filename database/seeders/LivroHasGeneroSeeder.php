@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use DB;
 class LivroHasGeneroSeeder extends Seeder
 {
     /**
@@ -13,6 +13,10 @@ class LivroHasGeneroSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('livros_has_genero')->insert([
+            'livro_id'=>1,
+             'genero_id'=>1,
+             ]);
+
     }
 }

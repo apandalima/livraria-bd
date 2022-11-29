@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use DB;
 class GeneroSeeder extends Seeder
 {
     /**
@@ -13,6 +13,9 @@ class GeneroSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('genero')->insert([
+
+            'tipo'=>"Fantasia e Romance",
+             ]);
     }
 }

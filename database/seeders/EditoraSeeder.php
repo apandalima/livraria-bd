@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use DB;
 class EditoraSeeder extends Seeder
 {
     /**
@@ -13,6 +13,8 @@ class EditoraSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('editora')->insert([
+            'nome'=>"Galera Record",
+             ]);
     }
 }

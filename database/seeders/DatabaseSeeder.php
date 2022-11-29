@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,7 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call(array(EditoraSeeder::class,
+       $this->call(array(
+        EditoraSeeder::class,
        GeneroSeeder::class,
        LivroHasGeneroSeeder::class,
        GeneroSeeder::class,

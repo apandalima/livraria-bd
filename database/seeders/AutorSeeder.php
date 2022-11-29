@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use DB;
 class AutorSeeder extends Seeder
 {
     /**
@@ -13,6 +13,9 @@ class AutorSeeder extends Seeder
      */
     public function run()
     {
-        //
+         DB::table('autor')->insert([
+        'nome'=>"Sarah J. Maas",
+        'tipo'=>"Fantasia e Romance",
+         ]);
     }
 }
