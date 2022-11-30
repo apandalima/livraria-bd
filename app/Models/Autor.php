@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Autor extends Model
 {
-    protected $table = 'autor'; 
+    protected $table = 'autor';
     protected $hidden = [];
     protected $appends = [];
-
+        
 }
