@@ -13,6 +13,15 @@ class Livro extends Model
 
     protected $appends = [];
 
+    public function getAutorAttribute(){
+        return $this->autorRelationship;
+    }
+    public function getEditoraAttribute(){
+        return $this->editoraRelationship;
+    }
+    public function getGeneroAttribute(){
+        return $this->generoRelationship;
+    }
      /**
          * get the autor por que pertece ao livro
          * @return autor
@@ -33,5 +42,7 @@ class Livro extends Model
         {
         return $this->belongsToMany(genero::class,'livros_has_genero','livro_id','genero_id');
         }
+
+
 
 }
