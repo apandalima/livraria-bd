@@ -16,5 +16,11 @@ class EditoraSeeder extends Seeder
         DB::table('editora')->insert([
             'nome'=>"Galera Record",
              ]);
+             DB::table('editora')->insert([
+                'nome'=>"Seguinte",
+                 ]);
+                 DB::table('editora')->insert([
+                    'nome'=>"DarKSide",
+                     ]);
     }
 }

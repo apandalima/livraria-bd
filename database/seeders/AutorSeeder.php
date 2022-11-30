@@ -15,7 +15,16 @@ class AutorSeeder extends Seeder
     {
          DB::table('autor')->insert([
         'nome'=>"Sarah J. Maas",
-        'tipo'=>"Fantasia e Romance",
+        'tipo'=>"literatura estrangeira",
          ]);
+         DB::table('autor')->insert([
+            'nome'=>"Colleen Hoover",
+            'tipo'=>"literatura estrangeira",
+             ]);
+             DB::table('autor')->insert([
+                'nome'=>"Charles Duhigg",
+                'tipo'=>"Autoajuda estrangeira",
+                 ]);
+
     }
 }
