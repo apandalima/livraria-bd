@@ -24,23 +24,23 @@ class Livro extends Model
     }
      /**
          * get the autor por que pertece ao livro
-         * @return autor
+         * @return Autor
          */
         public function autorRelationship()
         {
-        return $this->belongsTo(autor::class,'autor_id');
+        return $this->belongsTo(Autor::class,'autor_id');
         }
         /**
              * get the autor por que pertece ao livro
-             * @return editora
+             * @return Editora
              */
         public function editoraRelationship()
         {
-        return $this->belongsTo(editora::class,'editora_id');
+        return $this->belongsTo(Editora::class,'editora_id');
         }
         public function generoRelationship()
         {
-        return $this->belongsToMany(genero::class,'livros_has_genero','livro_id','genero_id');
+        return $this->belongsToMany(Genero::class,'livros_has_genero','livro_id','genero_id');
         }
 
 
