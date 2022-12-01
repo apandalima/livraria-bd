@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Livro;
+use App\Models\Genero;
+use App\Models\Autor;
+use App\Models\Editora;
 
 class LivroController extends Controller
 {
@@ -14,6 +17,12 @@ class LivroController extends Controller
     */
     public function __construct(Livro $livros){
         $this->livros = $livros;
+        //$this->autor = new Autor;
+        //$this->editora = new Editora;
+        //$this->autor = new Editora;
+        $this->autores = Autor::all()->pluck('nome','id');
+        $this->editoras = Editora::all()->pluck('nome','id');
+        $this->generos = Genero::all()->pluck('tipo','id');
     }
 
     /**
@@ -34,7 +43,16 @@ class LivroController extends Controller
      */
     public function create()
     {
-        //
+        $genero = $this->generos;
+        $autor = $this->autores;
+        $editora = $this->editoras;
+        //esta no plural só para melhor entendimento, pois o laravel entende
+     /**
+     * selecionar o que estão no banco para poder usar e preencher as informarções
+     */
+        return view('livros.form', compact('genero','autor','editora'));
+
+          // mudou index para form
     }
 
     /**

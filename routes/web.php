@@ -18,3 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/index', [LivroController::class, 'index'])->name('livros.index');
+Route::get('/create', [LivroController::class, 'create'])->name('livros.create');
