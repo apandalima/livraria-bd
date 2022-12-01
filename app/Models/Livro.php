@@ -9,7 +9,13 @@ class Livro extends Model
 {
     protected $table = 'livros';
 
-    protected $hidden = [];
+    protected $hidden = [
+        'autorRelationship',
+        'editoraRelationship',
+        'generoRelationship',
+        'created_at',
+        'upated_at',
+    ];
 
     protected $appends = [
         'autor',
