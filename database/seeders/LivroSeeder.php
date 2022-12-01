@@ -18,5 +18,10 @@ class LivroSeeder extends Seeder
              'autor_id'=>1,
              'editora_id'=>1,
              ]);
+        DB::table('livros')->insert([
+            'titulo'=>"É assim que acaba",
+            'autor_id'=>2,
+            'editora_id'=>1,
+            ]);
     }
 }
