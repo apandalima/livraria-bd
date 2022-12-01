@@ -22,6 +22,25 @@ class Livro extends Model
     public function getGeneroAttribute(){
         return $this->generoRelationship;
     }
+
+      public function setAutorAttribute($value)
+      {
+        if(isset($value)){
+            $this->atributes['autor_id'] = Autor::where('id',$value)->first()->id;
+        }
+      }
+      public function setEditoraAttribute($value)
+      {
+        if(isset($value)){
+            $this->atributes['editora_id'] = Editora::where('id',$value)->first()->id;
+        }
+      }
+      public function setGeneroAttribute($value)
+      {
+        if(isset($value)){
+            $this->generoRelationship()->sync($value);
+        }
+      }
      /**
          * get the autor por que pertece ao livro
          * @return Autor
@@ -42,7 +61,4 @@ class Livro extends Model
         {
         return $this->belongsToMany(Genero::class,'livros_has_genero','livro_id','genero_id');
         }
-
-
-
 }
