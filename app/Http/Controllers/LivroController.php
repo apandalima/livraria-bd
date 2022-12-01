@@ -23,7 +23,8 @@ class LivroController extends Controller
      */
     public function index()
     {
-        //
+        $livros = $this->livros->all();
+        return view('livros.index', compact('livros'));
     }
 
     /**
