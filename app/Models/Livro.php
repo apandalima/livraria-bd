@@ -11,7 +11,11 @@ class Livro extends Model
 
     protected $hidden = [];
 
-    protected $appends = [];
+    protected $appends = [
+        'autor',
+        'editora',
+        'genero'
+    ];
 
     public function getAutorAttribute(){
         return $this->autorRelationship;
