@@ -63,7 +63,28 @@ class LivroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //essa sintaxe é feito caso a chave estrangeira esteja na tabela principal
+        $livro = $this->livros->create([
+            'titulo' => $request->titulo,
+                                /* essa criação de create dentro de create quando for 1 para 1
+                                  'autor_id' => $this->autores->create([
+                                    'nome' => $request->nome,
+                                    'tipo' => $request->tipo,
+                                    ])->id,
+                                    'editora_id' => $this->editoras->create([
+                                    'nome' => $request->nome,
+                                    'tipo' => $request->tipo,
+                                ])->id,*/
+                'autor_id' =>$request->autor_id,
+                'editora_id' =>$request->editora_id,
+        ]);
+        $generos_id = $request->genero;
+        if (isset($generos_id)){
+                foreach ($generos_id as $genero_id)
+                {  $livro->generos()->attach(genero);
+                }
+        }
+        return redirect()->route('livros.index');
     }
 
     /**

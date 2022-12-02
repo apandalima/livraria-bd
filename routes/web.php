@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::get('/index', [LivroController::class, 'index'])->name('livros.index');
 Route::get('/create', [LivroController::class, 'create'])->name('livros.create');
+Route::post('/store', [LivroController::class, 'create'])->name('livros.route');
