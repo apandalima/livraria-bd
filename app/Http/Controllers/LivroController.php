@@ -95,6 +95,7 @@ class LivroController extends Controller
      */
     public function show($id) // no show passamos argumentos, no caso o id
     {
+        $form = 'disabled';
         $livro = $this->livros->find($id);
       //mesma info do create
         $genero = $this->generos;
