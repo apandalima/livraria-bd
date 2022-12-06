@@ -1,5 +1,11 @@
-<!DOCTYPE html>s
-{{$livro}}
+<!DOCTYPE html>
+
+@if (isset($livro)){
+    {{$livro}}
+}
+
+@endif
+
 {{$autor}}
 {{$genero}}
 {{$editora}}
