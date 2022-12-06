@@ -115,13 +115,13 @@ class LivroController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    { //mesma info do show
+    { //mesma info do show, tirando o form
         $livro = $this->livros->find($id);
         $genero = $this->generos;
         $autor = $this->autores;
         $editora = $this->editoras;
 
-        return view('livros.form', compact('genero','autor','editora','form','livro'));
+        return view('livros.form', compact('genero','autor','editora','livro'));
         //info do show
     }
 

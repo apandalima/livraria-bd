@@ -23,3 +23,4 @@ Route::post('/store', [LivroController::class, 'store'])->name('livros.store');
 // se usa o post para mandar info o get recebe info
 Route::get('/show/{id}', [LivroController::class, 'show'])->name('livros.show');
 //se usa o get pq quer ir buscar as info
+Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
