@@ -61,7 +61,7 @@ class LivroController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) //store insere algo no banco
     {
         //essa sintaxe é feito caso a chave estrangeira esteja na tabela principal
         $livro = $this->livros->create([
@@ -132,9 +132,22 @@ class LivroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) // att algo no banco
     {
-        //
+        $livro = $this->livros->find($id); //esse id é do bd
+        //find pega id do bd e get pega o id da coleção
+        $livro->update([
+            'titulo' => $request->titulo,
+                'autor_id' =>$request->autor_id,
+                'editora_id' =>$request->editora_id,
+        ]);
+        $generos_id = $request->genero;
+        if (isset($generos_id)){
+                foreach ($generos_id as $genero_id)
+                {  $livro->generos()->attach($genero_id);
+                }
+        }
+        return redirect()->route('livros.index');
     }
 
     /**

@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// se usa o post para mandar info o get recebe info
+//se usa o get pq quer ir buscar as info
 Route::get('/index', [LivroController::class, 'index'])->name('livros.index');
 Route::get('/create', [LivroController::class, 'create'])->name('livros.create');
 Route::post('/store', [LivroController::class, 'store'])->name('livros.store');
-// se usa o post para mandar info o get recebe info
 Route::get('/show/{id}', [LivroController::class, 'show'])->name('livros.show');
-//se usa o get pq quer ir buscar as info
 Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
