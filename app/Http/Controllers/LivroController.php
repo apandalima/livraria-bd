@@ -93,9 +93,17 @@ class LivroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id) // no show passamos argumentos, no caso o id
     {
-        //
+        $livro = $this->livros->find($id);
+      //mesma info do create
+        $genero = $this->generos;
+        $autor = $this->autores;
+        $editora = $this->editoras;
+
+        return view('livros.form', compact('genero','autor','editora','form','livro'));
+        //info do create
+
     }
 
     /**
