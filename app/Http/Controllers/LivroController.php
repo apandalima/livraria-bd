@@ -161,7 +161,7 @@ class LivroController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }
 

@@ -24,3 +24,4 @@ Route::get('/create', [LivroController::class, 'create'])->name('livros.create')
 Route::post('/store', [LivroController::class, 'store'])->name('livros.store');
 Route::get('/show/{id}', [LivroController::class, 'show'])->name('livros.show');
 Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
+Route::post('/update/{id}', [LivroController::class, 'update'])->name('livros.update');
