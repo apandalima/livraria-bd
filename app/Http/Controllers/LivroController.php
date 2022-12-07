@@ -161,7 +161,8 @@ class LivroController extends Controller
      */
     public function destroy($id)
     {
-        
+        $livros = $this->livros->find($id)->delete();
+        return redirect()->route('livros.index');
     }
 }
 
