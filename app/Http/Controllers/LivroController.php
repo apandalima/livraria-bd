@@ -142,12 +142,15 @@ class LivroController extends Controller
                 'editora_id' =>$request->editora_id,
         ]);
         $generos_id = $request->genero;
+
+        $livro->genero()->sync(null);
+
         if (isset($generos_id)){
                 foreach ($generos_id as $genero_id)
                 {  $livro->generos()->attach($genero_id);
                 }
         }
-        return redirect()->route('livros.index');
+        return redirect()->route('livros.show', $livro->id);
     }
 
     /**
