@@ -15,8 +15,21 @@ class LivroHasGeneroSeeder extends Seeder
     {
         DB::table('livros_has_genero')->insert([
             'livro_id'=>1,
-             'genero_id'=>1,
-             ]);
+            'genero_id'=>5,
+            ]);
+        DB::table('livros_has_genero')->insert([
+            'livro_id'=>1,
+            'genero_id'=>7,
+            ]);
+
+            DB::table('livros_has_genero')->insert([
+                'livro_id'=>2,
+                'genero_id'=>1,
+                ]);
+                DB::table('livros_has_genero')->insert([
+                    'livro_id'=>2,
+                    'genero_id'=>3,
+                    ]);
 
     }
 }
