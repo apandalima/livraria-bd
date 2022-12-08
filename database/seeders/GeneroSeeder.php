@@ -50,5 +50,11 @@ class GeneroSeeder extends Seeder
 
                  ]);
 
+        DB::table('genero')->insert([
+
+                    'tipo'=>"Psicologico",
+
+                     ]);
+
     }
 }

@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <h1> LIVROS </h1>
+        <h1> Listagem dos Livros </h1>
         <table class="table">
             <thead>
                 <!--  cabeçalho da tabela -->
@@ -17,6 +17,8 @@
                     <th scope="col">Autor</th>
                     <th scope="col">Editora</th>
                     <th scope="col">Genero</th>
+                    <th scope="col">Ações</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +38,10 @@
                             @foreach ($livro->genero as $genero)
                             {{$genero->tipo}};
                             @endforeach
+                        </td>
+                        <td>
+                            <a href="{{route('livros.show', $livro->id)}}">Visualizar</a>
+                            <a href="{{route('livros.edit', $livro->id)}}">Editar</a>
                         </td>
                     </tr>
                 @endforeach
