@@ -20,18 +20,18 @@
         {{-- olhar se tabela esta definido ou nao. é um if mais enxuto para melhor legibilidade
         {{           isset($livro) ? $livro->titulo : null  }}
   operador ternario forma mais reduzida, as duas ?? são usadas pois serve como operador p/ sinalizar q está de forma reduzida
-        {{           $livro->titulo??null }} --}}
+        {{           $livro->titulo??null }} -- }}
 
 
     </body>
 </html>
 
-@if (isset($livro)){
+{{-- @if (isset($livro)){
     {{$livro}}
 }
 
 @endif
 
-{{$autor}}
+{{-- {{$autor}}
 {{$genero}}
-{{$editora}}
+{{$editora}} --}} --}}
