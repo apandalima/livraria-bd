@@ -9,6 +9,8 @@
 
     <body>
         <h1> Listagem dos Livros </h1>
+        <a href="{{route('livros.create')}}">Novo Livro</a>
+        <br> <br/>
         <table class="table">
             <thead>
                 <!--  cabeçalho da tabela -->
