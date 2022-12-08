@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Genero extends Model
 {
     protected $table = 'genero';
-    protected $hidden = [];
+    protected $hidden = [
+        'created_at',
+        'upated_at',
+    ];
     protected $appends = [];
 
 }

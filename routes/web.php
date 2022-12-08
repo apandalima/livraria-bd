@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LivroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// se usa o post para mandar info o get recebe info
+//se usa o get pq quer ir buscar as info
+Route::get('/index', [LivroController::class, 'index'])->name('livros.index');
+Route::get('/create', [LivroController::class, 'create'])->name('livros.create');
+Route::post('/store', [LivroController::class, 'store'])->name('livros.store');
+Route::get('/show/{id}', [LivroController::class, 'show'])->name('livros.show');
+Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
+Route::post('/update/{id}', [LivroController::class, 'update'])->name('livros.update');
+Route::delete('/destroy/{id}', [LivroController::class, 'destroy'])->name('livros.destroy');
