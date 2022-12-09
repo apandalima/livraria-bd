@@ -26,6 +26,19 @@
 @endif--}}
 {!!form::label('titulo', 'Titulo:', ['class'=> 'form-check-label'])!!}
 {!!form::text('titulo', isset($livro) ? $livro->titulo : null,
-['class'=> 'form-control', 'placeholder' => 'Digite o titulo'])!!}
+['class'=> 'form-control', 'placeholder' => 'Digite o titulo', $form??null])!!}
+
+{!!form::label('autor', 'Autor:', ['class'=> 'form-check-label'])!!}
+{!!form::select('autor', $autores, isset($livro) ? $livro->$autor->id: null,
+['class' => 'form-control', isset($form) ? $form : null])!!}
+
+{{dd($autores)}}
+
+{!!form::label('editora', 'Editora:', ['class'=> 'form-check-label'])!!}
+{!!form::select('editora', $editoras, isset($livro) ? $livro->$editora->id: null,
+['class' => 'form-control', isset($form) ? $form : null])!!}
+
+{{dd($autores)}} {{-- dd serve pra saber se se o codigo ta quebrando ou nao --}}
+
 </body>+
 </html>
