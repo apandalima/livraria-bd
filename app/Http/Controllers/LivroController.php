@@ -82,7 +82,7 @@
             $generos_id = $request->genero;
             if (isset($generos_id)){
                     foreach ($generos_id as $genero_id)
-                    {  $livro->generos()->attach($genero_id);
+                    {  $livro->generoRelationship()->attach($genero_id);
                     }
             }
             return redirect()->route('livros.index');

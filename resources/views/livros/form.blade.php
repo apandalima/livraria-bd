@@ -46,8 +46,8 @@
 
     @foreach ($genero as $gener)
 
-    {!!Form::label("genero$loop->iteration", $gener, ['class' => 'labelmargem'])!!}
-    {!!Form::checkbox("genero$loop->iteration",$loop->iteration, false, ['id'=> 'genero',
+    {!!Form::label("genero[]", $gener, ['class' => 'labelmargem'])!!}
+    {!!Form::checkbox("genero[]",$loop->iteration, false, ['id'=> 'genero',
     isset($form) ? $form : null])!!}
 
     {{-- {!!Form::checkbox('genero','value')!!} --}}
