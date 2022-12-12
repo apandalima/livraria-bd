@@ -63,6 +63,7 @@
          */
         public function store(Request $request) //store insere algo no banco
         {
+        dd($request);
             //essa sintaxe é feito caso a chave estrangeira esteja na tabela principal
             $livro = $this->livros->create([
                 'titulo' => $request->titulo,
