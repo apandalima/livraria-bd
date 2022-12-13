@@ -57,13 +57,18 @@
     {{-- {!!Form::checkbox('genero','value')!!} --}}
     @endforeach
 
-    {{-- if para esconder o botão no show --}}
+    {{-- if para esconder o botão no show, empty é o conntrario de isset--}}
     @if (empty($form))
         {!! Form::submit('Salvar', ['class'=> 'btn btn-sucess', $form??null]) !!}
 
     @endif
 
     {!! Form::close() !!}
-
+        {{-- Botão de deletar personagem, se existir --}}
+    @if (isset($livro) && (empty($form)))
+        {!! Form::open(['route' => array('livros.destroy', $livro->id), 'method' => 'DELETE', 'name' => 'form'])!!}
+        {!! Form::submit('Excluir', ['class' => 'btn btn-danger', $form??null])!!}
+        {!! Form::close() !!}
+    @endif
     </body>
     </html>
