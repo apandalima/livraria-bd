@@ -76,8 +76,8 @@
                                         'nome' => $request->nome,
                                         'tipo' => $request->tipo,
                                     ])->id,*/
-                    'autor_id' =>$request->autor_id,
-                    'editora_id' =>$request->editora_id,
+                    'autor_id' =>$request->autor,
+                    'editora_id' =>$request->editora,
             ]);
             $generos_id = $request->genero;
             if (isset($generos_id)){
@@ -139,16 +139,16 @@
             //find pega id do bd e get pega o id da coleção
             $livro->update([
                 'titulo' => $request->titulo,
-                    'autor_id' =>$request->autor_id,
-                    'editora_id' =>$request->editora_id,
+                    'autor_id' =>$request->autor,
+                    'editora_id' =>$request->editora,
             ]);
             $generos_id = $request->genero;
 
-            $livro->genero()->sync(null);
+            $livro->generoRelationship()->sync(null);
 
             if (isset($generos_id)){
                     foreach ($generos_id as $genero_id)
-                    {  $livro->generos()->attach($genero_id);
+                    {  $livro->generoRelationship()->attach($genero_id);
                     }
             }
             return redirect()->route('livros.show', $livro->id);

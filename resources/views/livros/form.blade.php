@@ -23,7 +23,11 @@
                 {!! Form::open(['route' => ['livros.update', $livro->id], 'method' => 'PUT', 'name' => 'form'])!!}
                 @else
                 {{-- rota para criar os dados  --}}
+
                 {!! Form::open(['route' => 'livros.store', 'method' => 'POST', 'name' => 'form'])!!}
+                {{-- {{Form::hidden('_method','PUT')}} --}}
+
+
                 {{-- Se usa o put  no update e no store se usa o post --}}
         @endif
 
