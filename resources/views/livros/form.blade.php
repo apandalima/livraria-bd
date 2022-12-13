@@ -56,7 +56,14 @@
 
     {{-- {!!Form::checkbox('genero','value')!!} --}}
     @endforeach
-    {!! Form::submit('Salvar', ['class'=> 'btn btn-sucess', $form??null]) !!}
+
+    {{-- if para esconder o botão no show --}}
+    @if (empty($form))
+        {!! Form::submit('Salvar', ['class'=> 'btn btn-sucess', $form??null]) !!}
+
+    @endif
+
     {!! Form::close() !!}
+
     </body>
     </html>

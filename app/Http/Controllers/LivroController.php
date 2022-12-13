@@ -138,7 +138,7 @@
             $livro = $this->livros->find($id); //esse id é do bd
             //find pega id do bd e get pega o id da coleção
             $livro->update([
-                'titulo' => $request->titulo,
+                    'titulo' => $request->titulo,
                     'autor_id' =>$request->autor,
                     'editora_id' =>$request->editora,
             ]);
