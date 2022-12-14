@@ -16,6 +16,7 @@
             <thead>
                 <!--  cabeçalho da tabela -->
                 <tr>
+                    
                     <th scope="col">Titulo</th> <!--  cabeçalho da celula -->
                     <th scope="col">Autor</th>
                     <th scope="col">Editora</th>

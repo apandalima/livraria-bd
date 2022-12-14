@@ -3,6 +3,18 @@ h1 {
   color: rgb(10, 10, 131);
 }
 
+a {
+  color: rgb(16, 105, 207);
+  font-family: Fira Sans, sans-serif;
+  text-decoration: none;
+}
+
+label {
+  color: black;
+  font-family: Fira Sans, sans-serif;
+  text-decoration: none;
+}
+
 body {
   background-color: rgb(242, 252, 252);
 }
@@ -17,4 +29,12 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #fffefe;
+}
+
+tr:nth-child(even) {
+  background-color: #d3d3d3;
 }
