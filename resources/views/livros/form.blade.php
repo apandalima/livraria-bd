@@ -9,7 +9,7 @@
                 @else
                 <title> Criação dos Livros</title>
                 @endif
-
+                <link rel="stylesheet" href= "{{asset('/css/app.css')}}">
         </head>
         <body>
             @csrf
@@ -65,7 +65,7 @@
 
     {!! Form::close() !!}
         {{-- Botão de deletar personagem, se existir --}}
-    @if (isset($livro) && (empty($form)))
+    @if (isset($livro) && empty($form))
         {!! Form::open(['route' => array('livros.destroy', $livro->id), 'method' => 'DELETE', 'name' => 'form'])!!}
         {!! Form::submit('Excluir', ['class' => 'btn btn-danger', $form??null])!!}
         {!! Form::close() !!}
