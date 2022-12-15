@@ -14,7 +14,7 @@
 
     <body class="bode">
         <h1> Listagem dos Livros </h1>
-        <a href="{{ route('livros.create') }}">Novo Livro</a>
+        <a type="button" class="btn btn-outline-primary" href="{{ route('livros.create') }}">Novo Livro</a>
         <br> <br />
         <table class="table">
             <thead>
@@ -48,14 +48,18 @@
                             @endforeach
                         </td>
                         <td>
-                            <a href="{{ route('livros.show', $livro->id) }}">Visualizar</a>
-                            <a href="{{ route('livros.edit', $livro->id) }}">Editar</a>
+                            <a type="button" class="btn btn-primary" href="{{ route('livros.show', $livro->id) }}">Visualizar</a>
+                            <a type="button" class="btn btn-warning" href="{{ route('livros.edit', $livro->id) }}">Editar</a>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+                integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
             </script>
     </body>
 

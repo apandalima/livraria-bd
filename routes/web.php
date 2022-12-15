@@ -14,9 +14,9 @@
     |
     */
 
-   // Route::get('/a', function () {
-        //return view('welcome');
-    //});
+//    Route::get('/a', function () {
+//         return view('homepage');
+//     });
     // se usa o post para mandar info o get recebe info
     //se usa o get pq quer ir buscar as info
     Route::get('/', [LivroController::class, 'index'])->name('livros.index');
@@ -26,3 +26,7 @@
     Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
     Route::put('/update/{id}', [LivroController::class, 'update'])->name('livros.update');
     Route::delete('/destroy/{id}', [LivroController::class, 'destroy'])->name('livros.destroy');
+
+    // Route::get('/', function () {
+    //     return view('homepage');
+    // });

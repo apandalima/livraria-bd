@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fichas de personagens</title>
+    <title>Lista de Livros</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -15,7 +15,7 @@
     {{-- Imagem de background e fonte que não funcionou direto no sass --}}
     <style>
         body {
-            background-image: url('/img/homepage_girl.jpg');
+            /* background-image: url('/img/homepage_girl.jpg'); */
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -32,15 +32,15 @@
 <body>
     {{-- Titulo --}}
     <br>
-    <h1>&emsp;Fichas de Personagens &#127993;</h1>
+    <h1>&emsp;Livros &#127993;</h1>
     <br />
     {{-- Subtitulo --}}
-    <h3>&ensp;Para onde deseja ir, jovem aventureiro?</h3>
+    <h3>&ensp;Selecione uma opção</h3>
     {{-- Botão de listar personagens --}}
-    &ensp;<a type="button" class="btn btn-primary" href="{{ route('personagens.index') }}">Listar personagens criados</a>
+    &ensp;<a type="button" class="btn btn-primary" href="{{ route('livros.index') }}">Listar Livros</a>
     <br /><br />
     {{-- Botão de criar personagem --}}
-    &ensp;<a type="button" class="btn btn-success" href="{{ route('personagens.create') }}">Criar personagem</a>
+    &ensp;<a type="button" class="btn btn-success" href="{{ route('livros.create') }}">Inserir  Titulo Novo</a>
 </body>
 
 </html>
