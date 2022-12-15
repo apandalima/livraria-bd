@@ -13,14 +13,17 @@ class EditoraSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('editora')->insert([
+        DB::table('editora')->insert([ //editora 1
             'nome'=>"Galera Record",
              ]);
-             DB::table('editora')->insert([
+             DB::table('editora')->insert([ //editora 2
                 'nome'=>"Seguinte",
                  ]);
-                 DB::table('editora')->insert([
+        DB::table('editora')->insert([  //editora 3
                     'nome'=>"DarKSide",
                      ]);
+         DB::table('editora')->insert([  //editora 4
+                        'nome'=>"Objetiva",
+                         ]);
     }
 }
