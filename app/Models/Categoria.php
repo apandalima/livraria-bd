@@ -5,9 +5,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Genero extends Model
+class Categoria extends Model
 {
-    protected $table = 'Categoria';
+    protected $table = 'categoria';
     protected $hidden = [
         'created_at',
         'upated_at',

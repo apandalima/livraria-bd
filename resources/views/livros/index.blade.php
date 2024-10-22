@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="pt-br">
 
     <head>
@@ -24,7 +24,7 @@
                     <th scope="col">Titulo</th> <!--  cabeçalho da celula -->
                     <th scope="col">Autor</th>
                     <th scope="col">Editora</th>
-                    <th scope="col">Genero</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Ações</th>
 
                 </tr>
@@ -43,7 +43,7 @@
                         </td>
                         {{-- {{dd($livro->categoria)}} depuração --}}
                         <td>
-                            @foreach ($livro->gategoria as $categoria)
+                            @foreach ($livro->categoria as $categoria)
                                 {{ $categoria->tipo }};
                             @endforeach
                         </td>

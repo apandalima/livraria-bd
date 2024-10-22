@@ -29,8 +29,8 @@ class Livro extends Model
     public function getEditoraAttribute(){
         return $this->editoraRelationship;
     }
-    public function getGCategoriaAttribute(){
-        return $this->categoriaRelationship;
+    public function getCategoriaAttribute(){
+        return $this->CategoriaRelationship;
     }
 
       public function setAutorAttribute($value)

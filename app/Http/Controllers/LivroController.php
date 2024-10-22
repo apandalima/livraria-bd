@@ -147,7 +147,7 @@
             $livro->categoriaRelationship()->sync(null);
 
             if (isset($categorias_id)){
-                    foreach ($categoria_id as $categoria_id)
+                    foreach ($categorias_id as $categoria_id)
                     {  $livro->categoriaRelationship()->attach($categoria_id);
                     }
             }

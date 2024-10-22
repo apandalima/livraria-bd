@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="pt-br">
 
         <head>
@@ -52,7 +52,7 @@
 
     @foreach ($categoria as $cat)
 
-    {!!Form::label("categoria[]", $cat, ['class' => 'labelmargem'])!!}
+    {!!Form::label("categoria[]", $gener, ['class' => 'labelmargem'])!!}
     {!!Form::checkbox("categoria[]",$loop->iteration, false, ['id'=> 'categoria',
     isset($form) ? $form : null])!!}
 

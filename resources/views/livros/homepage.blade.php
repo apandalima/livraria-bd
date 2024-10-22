@@ -36,10 +36,10 @@
     <br />
     {{-- Subtitulo --}}
     <h3>&ensp;Selecione uma opção</h3>
-    {{-- Botão de listar livros --}}
+    {{-- Botão de listar personagens --}}
     &ensp;<a type="button" class="btn btn-primary" href="{{ route('livros.index') }}">Listar Livros</a>
     <br /><br />
-    {{-- Botão de criar criar --}}
+    {{-- Botão de criar personagem --}}
     &ensp;<a type="button" class="btn btn-success" href="{{ route('livros.create') }}">Inserir  Titulo Novo</a>
 </body>
 
