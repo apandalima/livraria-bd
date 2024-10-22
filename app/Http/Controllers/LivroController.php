@@ -21,7 +21,7 @@
             //$this->editora = new Editora;
             //$this->autor = new Editora;
             $this->autores = Autor::all()->pluck('nome','id');
-            $this->editoras = Editora::all()->pluck('nome','id');
+            $this->editoras = Editora::all()->pluck('nome_editora','id');
             $this->categorias = Categoria::all()->pluck('tipo','id');
         }
 
