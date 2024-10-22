@@ -26,7 +26,6 @@
     Route::get('/edit/{id}', [LivroController::class, 'edit'])->name('livros.edit');
     Route::put('/update/{id}', [LivroController::class, 'update'])->name('livros.update');
     Route::delete('/destroy/{id}', [LivroController::class, 'destroy'])->name('livros.destroy');
-
     // Route::get('/', function () {
     //     return view('homepage');
     // });
