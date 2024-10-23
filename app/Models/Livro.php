@@ -2,19 +2,27 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Livro extends Model
 {
     protected $table = 'livros';
 
+    protected $fillable = [
+        'titulo',
+        'isbn',
+        'sinopse',
+        'preco',
+        'autor_id',
+        'editora_id',
+    ];
+
     protected $hidden = [
         'autorRelationship',
         'editoraRelationship',
         'categoriaRelationship',
         'created_at',
-        'upated_at',
+        'updated_at',
     ];
 
     protected $appends = [
@@ -33,42 +41,37 @@ class Livro extends Model
         return $this->CategoriaRelationship;
     }
 
-      public function setAutorAttribute($value)
-      {
+    public function setAutorAttribute($value)
+    {
         if(isset($value)){
-            $this->atributes['autor_id'] = Autor::where('id',$value)->first()->id;
+            $this->attributes['autor_id'] = Autor::where('id',$value)->first()->id;
         }
-      }
-      public function setEditoraAttribute($value)
-      {
+    }
+    public function setEditoraAttribute($value)
+    {
         if(isset($value)){
-            $this->atributes['editora_id'] = Editora::where('id',$value)->first()->id;
+            $this->attributes['editora_id'] = Editora::where('id',$value)->first()->id;
         }
-      }
-      public function setCategoriaAttribute($value)
-      {
+    }
+    public function setCategoriaAttribute($value)
+    {
         if(isset($value)){
             $this->categoriaRelationship()->sync($value);
         }
-      }
-     /**
-         * get the autor por que pertece ao livro
-         * @return Autor
-         */
-        public function autorRelationship()
-        {
+    }
+
+    public function autorRelationship()
+    {
         return $this->belongsTo(Autor::class,'autor_id');
-        }
-        /**
-             * get the autor por que pertece ao livro
-             * @return Editora
-             */
-        public function editoraRelationship()
-        {
+    }
+
+    public function editoraRelationship()
+    {
         return $this->belongsTo(Editora::class,'editora_id');
-        }
-        public function categoriaRelationship()
-        {
+    }
+
+    public function categoriaRelationship()
+    {
         return $this->belongsToMany(Categoria::class,'livros_has_categoria','livro_id','categoria_id');
-        }
+    }
 }
